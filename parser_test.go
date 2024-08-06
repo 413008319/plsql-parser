@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
+	plsqlparser "github.com/413008319/plsql-parser"
 	"github.com/antlr4-go/antlr/v4"
-	plsqlparser "github.com/bytebase/plsql-parser"
 	"github.com/stretchr/testify/require"
 )
 

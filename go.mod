@@ -1,4 +1,4 @@
-module github.com/bytebase/plsql-parser
+module github.com/413008319/plsql-parser
 
 go 1.20
 
