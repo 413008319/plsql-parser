@@ -1,4 +1,4 @@
-// Code generated from PlSqlParser.g4 by ANTLR 4.13.0. DO NOT EDIT.
+// Code generated from PlSqlParser.g4 by ANTLR 4.13.2. DO NOT EDIT.
 
 package parser // PlSqlParser
 import "github.com/antlr4-go/antlr/v4"
@@ -183,6 +183,21 @@ type PlSqlParserListener interface {
 
 	// EnterResult_cache_clause is called when entering the result_cache_clause production.
 	EnterResult_cache_clause(c *Result_cache_clauseContext)
+
+	// EnterAccessible_by_clause is called when entering the accessible_by_clause production.
+	EnterAccessible_by_clause(c *Accessible_by_clauseContext)
+
+	// EnterDefault_collation_clause is called when entering the default_collation_clause production.
+	EnterDefault_collation_clause(c *Default_collation_clauseContext)
+
+	// EnterAggregate_clause is called when entering the aggregate_clause production.
+	EnterAggregate_clause(c *Aggregate_clauseContext)
+
+	// EnterPipelined_using_clause is called when entering the pipelined_using_clause production.
+	EnterPipelined_using_clause(c *Pipelined_using_clauseContext)
+
+	// EnterAccessor is called when entering the accessor production.
+	EnterAccessor(c *AccessorContext)
 
 	// EnterRelies_on_part is called when entering the relies_on_part production.
 	EnterRelies_on_part(c *Relies_on_partContext)
@@ -622,6 +637,9 @@ type PlSqlParserListener interface {
 	// EnterAction_audit_clause is called when entering the action_audit_clause production.
 	EnterAction_audit_clause(c *Action_audit_clauseContext)
 
+	// EnterSystem_actions is called when entering the system_actions production.
+	EnterSystem_actions(c *System_actionsContext)
+
 	// EnterStandard_actions is called when entering the standard_actions production.
 	EnterStandard_actions(c *Standard_actionsContext)
 
@@ -709,9 +727,6 @@ type PlSqlParserListener interface {
 	// EnterBitmap_join_index_clause is called when entering the bitmap_join_index_clause production.
 	EnterBitmap_join_index_clause(c *Bitmap_join_index_clauseContext)
 
-	// EnterIndex_expr_option is called when entering the index_expr_option production.
-	EnterIndex_expr_option(c *Index_expr_optionContext)
-
 	// EnterIndex_expr is called when entering the index_expr production.
 	EnterIndex_expr(c *Index_exprContext)
 
@@ -735,6 +750,9 @@ type PlSqlParserListener interface {
 
 	// EnterIndex_partitioning_clause is called when entering the index_partitioning_clause production.
 	EnterIndex_partitioning_clause(c *Index_partitioning_clauseContext)
+
+	// EnterIndex_partitioning_values_list is called when entering the index_partitioning_values_list production.
+	EnterIndex_partitioning_values_list(c *Index_partitioning_values_listContext)
 
 	// EnterLocal_partitioned_index is called when entering the local_partitioned_index production.
 	EnterLocal_partitioned_index(c *Local_partitioned_indexContext)
@@ -1393,9 +1411,6 @@ type PlSqlParserListener interface {
 	// EnterBuild_clause is called when entering the build_clause production.
 	EnterBuild_clause(c *Build_clauseContext)
 
-	// EnterPartial_index_clause is called when entering the partial_index_clause production.
-	EnterPartial_index_clause(c *Partial_index_clauseContext)
-
 	// EnterParallel_clause is called when entering the parallel_clause production.
 	EnterParallel_clause(c *Parallel_clauseContext)
 
@@ -1747,6 +1762,9 @@ type PlSqlParserListener interface {
 	// EnterRange_values_clause is called when entering the range_values_clause production.
 	EnterRange_values_clause(c *Range_values_clauseContext)
 
+	// EnterRange_values_list is called when entering the range_values_list production.
+	EnterRange_values_list(c *Range_values_listContext)
+
 	// EnterList_values_clause is called when entering the list_values_clause production.
 	EnterList_values_clause(c *List_values_clauseContext)
 
@@ -1842,96 +1860,6 @@ type PlSqlParserListener interface {
 
 	// EnterOpaque_format_spec is called when entering the opaque_format_spec production.
 	EnterOpaque_format_spec(c *Opaque_format_specContext)
-
-	// EnterRecord_format_info is called when entering the record_format_info production.
-	EnterRecord_format_info(c *Record_format_infoContext)
-
-	// EnterEt_record_spec_options is called when entering the et_record_spec_options production.
-	EnterEt_record_spec_options(c *Et_record_spec_optionsContext)
-
-	// EnterEt_record_spec_option is called when entering the et_record_spec_option production.
-	EnterEt_record_spec_option(c *Et_record_spec_optionContext)
-
-	// EnterEt_output_files is called when entering the et_output_files production.
-	EnterEt_output_files(c *Et_output_filesContext)
-
-	// EnterEt_output_file is called when entering the et_output_file production.
-	EnterEt_output_file(c *Et_output_fileContext)
-
-	// EnterDirectory_spec is called when entering the directory_spec production.
-	EnterDirectory_spec(c *Directory_specContext)
-
-	// EnterFile_spec is called when entering the file_spec production.
-	EnterFile_spec(c *File_specContext)
-
-	// EnterField_definitions is called when entering the field_definitions production.
-	EnterField_definitions(c *Field_definitionsContext)
-
-	// EnterField_options is called when entering the field_options production.
-	EnterField_options(c *Field_optionsContext)
-
-	// EnterField_option is called when entering the field_option production.
-	EnterField_option(c *Field_optionContext)
-
-	// EnterField_list is called when entering the field_list production.
-	EnterField_list(c *Field_listContext)
-
-	// EnterField_item is called when entering the field_item production.
-	EnterField_item(c *Field_itemContext)
-
-	// EnterField_name is called when entering the field_name production.
-	EnterField_name(c *Field_nameContext)
-
-	// EnterPos_spec is called when entering the pos_spec production.
-	EnterPos_spec(c *Pos_specContext)
-
-	// EnterPos_start is called when entering the pos_start production.
-	EnterPos_start(c *Pos_startContext)
-
-	// EnterPos_increment is called when entering the pos_increment production.
-	EnterPos_increment(c *Pos_incrementContext)
-
-	// EnterPos_end is called when entering the pos_end production.
-	EnterPos_end(c *Pos_endContext)
-
-	// EnterPos_length is called when entering the pos_length production.
-	EnterPos_length(c *Pos_lengthContext)
-
-	// EnterDatatype_spec is called when entering the datatype_spec production.
-	EnterDatatype_spec(c *Datatype_specContext)
-
-	// EnterInit_spec is called when entering the init_spec production.
-	EnterInit_spec(c *Init_specContext)
-
-	// EnterLls_clause is called when entering the lls_clause production.
-	EnterLls_clause(c *Lls_clauseContext)
-
-	// EnterDelim_spec is called when entering the delim_spec production.
-	EnterDelim_spec(c *Delim_specContext)
-
-	// EnterTrim_spec is called when entering the trim_spec production.
-	EnterTrim_spec(c *Trim_specContext)
-
-	// EnterField_date_format is called when entering the field_date_format production.
-	EnterField_date_format(c *Field_date_formatContext)
-
-	// EnterColumn_transforms is called when entering the column_transforms production.
-	EnterColumn_transforms(c *Column_transformsContext)
-
-	// EnterTransform is called when entering the transform production.
-	EnterTransform(c *TransformContext)
-
-	// EnterSource_field is called when entering the source_field production.
-	EnterSource_field(c *Source_fieldContext)
-
-	// EnterLobfile_item is called when entering the lobfile_item production.
-	EnterLobfile_item(c *Lobfile_itemContext)
-
-	// EnterLobfile_attr_list is called when entering the lobfile_attr_list production.
-	EnterLobfile_attr_list(c *Lobfile_attr_listContext)
-
-	// EnterConcat_item is called when entering the concat_item production.
-	EnterConcat_item(c *Concat_itemContext)
 
 	// EnterRow_movement_clause is called when entering the row_movement_clause production.
 	EnterRow_movement_clause(c *Row_movement_clauseContext)
@@ -2290,9 +2218,6 @@ type PlSqlParserListener interface {
 	// EnterCreate_database_link is called when entering the create_database_link production.
 	EnterCreate_database_link(c *Create_database_linkContext)
 
-	// EnterDblink is called when entering the dblink production.
-	EnterDblink(c *DblinkContext)
-
 	// EnterDrop_database_link is called when entering the drop_database_link production.
 	EnterDrop_database_link(c *Drop_database_linkContext)
 
@@ -2449,11 +2374,11 @@ type PlSqlParserListener interface {
 	// EnterModify_column_clauses is called when entering the modify_column_clauses production.
 	EnterModify_column_clauses(c *Modify_column_clausesContext)
 
-	// EnterModify_col_visibility is called when entering the modify_col_visibility production.
-	EnterModify_col_visibility(c *Modify_col_visibilityContext)
-
 	// EnterModify_col_properties is called when entering the modify_col_properties production.
 	EnterModify_col_properties(c *Modify_col_propertiesContext)
+
+	// EnterModify_col_visibility is called when entering the modify_col_visibility production.
+	EnterModify_col_visibility(c *Modify_col_visibilityContext)
 
 	// EnterModify_col_substitutable is called when entering the modify_col_substitutable production.
 	EnterModify_col_substitutable(c *Modify_col_substitutableContext)
@@ -2584,9 +2509,6 @@ type PlSqlParserListener interface {
 	// EnterDrop_constraint_clause is called when entering the drop_constraint_clause production.
 	EnterDrop_constraint_clause(c *Drop_constraint_clauseContext)
 
-	// EnterDrop_primary_key_or_unique_or_generic_clause is called when entering the drop_primary_key_or_unique_or_generic_clause production.
-	EnterDrop_primary_key_or_unique_or_generic_clause(c *Drop_primary_key_or_unique_or_generic_clauseContext)
-
 	// EnterAdd_constraint is called when entering the add_constraint production.
 	EnterAdd_constraint(c *Add_constraintContext)
 
@@ -2640,6 +2562,12 @@ type PlSqlParserListener interface {
 
 	// EnterC_parameters_clause is called when entering the c_parameters_clause production.
 	EnterC_parameters_clause(c *C_parameters_clauseContext)
+
+	// EnterC_external_parameter is called when entering the c_external_parameter production.
+	EnterC_external_parameter(c *C_external_parameterContext)
+
+	// EnterC_property is called when entering the c_property production.
+	EnterC_property(c *C_propertyContext)
 
 	// EnterParameter is called when entering the parameter production.
 	EnterParameter(c *ParameterContext)
@@ -2761,6 +2689,15 @@ type PlSqlParserListener interface {
 	// EnterPipe_row_statement is called when entering the pipe_row_statement production.
 	EnterPipe_row_statement(c *Pipe_row_statementContext)
 
+	// EnterSelection_directive is called when entering the selection_directive production.
+	EnterSelection_directive(c *Selection_directiveContext)
+
+	// EnterError_directive is called when entering the error_directive production.
+	EnterError_directive(c *Error_directiveContext)
+
+	// EnterSelection_directive_body is called when entering the selection_directive_body production.
+	EnterSelection_directive_body(c *Selection_directive_bodyContext)
+
 	// EnterBody is called when entering the body production.
 	EnterBody(c *BodyContext)
 
@@ -2769,6 +2706,9 @@ type PlSqlParserListener interface {
 
 	// EnterTrigger_block is called when entering the trigger_block production.
 	EnterTrigger_block(c *Trigger_blockContext)
+
+	// EnterTps_block is called when entering the tps_block production.
+	EnterTps_block(c *Tps_blockContext)
 
 	// EnterBlock is called when entering the block production.
 	EnterBlock(c *BlockContext)
@@ -2797,6 +2737,9 @@ type PlSqlParserListener interface {
 	// EnterFetch_statement is called when entering the fetch_statement production.
 	EnterFetch_statement(c *Fetch_statementContext)
 
+	// EnterVariable_or_collection is called when entering the variable_or_collection production.
+	EnterVariable_or_collection(c *Variable_or_collectionContext)
+
 	// EnterOpen_for_statement is called when entering the open_for_statement production.
 	EnterOpen_for_statement(c *Open_for_statementContext)
 
@@ -2821,6 +2764,9 @@ type PlSqlParserListener interface {
 	// EnterSavepoint_statement is called when entering the savepoint_statement production.
 	EnterSavepoint_statement(c *Savepoint_statementContext)
 
+	// EnterCollection_method_call is called when entering the collection_method_call production.
+	EnterCollection_method_call(c *Collection_method_callContext)
+
 	// EnterExplain_statement is called when entering the explain_statement production.
 	EnterExplain_statement(c *Explain_statementContext)
 
@@ -2830,17 +2776,41 @@ type PlSqlParserListener interface {
 	// EnterSelect_statement is called when entering the select_statement production.
 	EnterSelect_statement(c *Select_statementContext)
 
+	// EnterWith_clause is called when entering the with_clause production.
+	EnterWith_clause(c *With_clauseContext)
+
+	// EnterWith_factoring_clause is called when entering the with_factoring_clause production.
+	EnterWith_factoring_clause(c *With_factoring_clauseContext)
+
 	// EnterSubquery_factoring_clause is called when entering the subquery_factoring_clause production.
 	EnterSubquery_factoring_clause(c *Subquery_factoring_clauseContext)
-
-	// EnterFactoring_element is called when entering the factoring_element production.
-	EnterFactoring_element(c *Factoring_elementContext)
 
 	// EnterSearch_clause is called when entering the search_clause production.
 	EnterSearch_clause(c *Search_clauseContext)
 
 	// EnterCycle_clause is called when entering the cycle_clause production.
 	EnterCycle_clause(c *Cycle_clauseContext)
+
+	// EnterSubav_factoring_clause is called when entering the subav_factoring_clause production.
+	EnterSubav_factoring_clause(c *Subav_factoring_clauseContext)
+
+	// EnterSubav_clause is called when entering the subav_clause production.
+	EnterSubav_clause(c *Subav_clauseContext)
+
+	// EnterHierarchies_clause is called when entering the hierarchies_clause production.
+	EnterHierarchies_clause(c *Hierarchies_clauseContext)
+
+	// EnterFilter_clauses is called when entering the filter_clauses production.
+	EnterFilter_clauses(c *Filter_clausesContext)
+
+	// EnterFilter_clause is called when entering the filter_clause production.
+	EnterFilter_clause(c *Filter_clauseContext)
+
+	// EnterAdd_calcs_clause is called when entering the add_calcs_clause production.
+	EnterAdd_calcs_clause(c *Add_calcs_clauseContext)
+
+	// EnterAdd_calc_meas_clause is called when entering the add_calc_meas_clause production.
+	EnterAdd_calc_meas_clause(c *Add_calc_meas_clauseContext)
 
 	// EnterSubquery is called when entering the subquery production.
 	EnterSubquery(c *SubqueryContext)
@@ -2863,9 +2833,6 @@ type PlSqlParserListener interface {
 	// EnterSelect_list_elements is called when entering the select_list_elements production.
 	EnterSelect_list_elements(c *Select_list_elementsContext)
 
-	// EnterTable_wild is called when entering the table_wild production.
-	EnterTable_wild(c *Table_wildContext)
-
 	// EnterTable_ref_list is called when entering the table_ref_list production.
 	EnterTable_ref_list(c *Table_ref_listContext)
 
@@ -2881,8 +2848,8 @@ type PlSqlParserListener interface {
 	// EnterTable_ref_aux_internal_two is called when entering the table_ref_aux_internal_two production.
 	EnterTable_ref_aux_internal_two(c *Table_ref_aux_internal_twoContext)
 
-	// EnterTable_ref_aux_internal_three is called when entering the table_ref_aux_internal_three production.
-	EnterTable_ref_aux_internal_three(c *Table_ref_aux_internal_threeContext)
+	// EnterTable_ref_aux_internal_thre is called when entering the table_ref_aux_internal_thre production.
+	EnterTable_ref_aux_internal_thre(c *Table_ref_aux_internal_threContext)
 
 	// EnterJoin_clause is called when entering the join_clause production.
 	EnterJoin_clause(c *Join_clauseContext)
@@ -3121,9 +3088,6 @@ type PlSqlParserListener interface {
 	// EnterCondition is called when entering the condition production.
 	EnterCondition(c *ConditionContext)
 
-	// EnterJson_condition is called when entering the json_condition production.
-	EnterJson_condition(c *Json_conditionContext)
-
 	// EnterExpressions is called when entering the expressions production.
 	EnterExpressions(c *ExpressionsContext)
 
@@ -3138,6 +3102,9 @@ type PlSqlParserListener interface {
 
 	// EnterUnary_logical_expression is called when entering the unary_logical_expression production.
 	EnterUnary_logical_expression(c *Unary_logical_expressionContext)
+
+	// EnterUnary_logical_operation is called when entering the unary_logical_operation production.
+	EnterUnary_logical_operation(c *Unary_logical_operationContext)
 
 	// EnterLogical_operation is called when entering the logical_operation production.
 	EnterLogical_operation(c *Logical_operationContext)
@@ -3180,6 +3147,12 @@ type PlSqlParserListener interface {
 
 	// EnterUnary_expression is called when entering the unary_expression production.
 	EnterUnary_expression(c *Unary_expressionContext)
+
+	// EnterImplicit_cursor_expression is called when entering the implicit_cursor_expression production.
+	EnterImplicit_cursor_expression(c *Implicit_cursor_expressionContext)
+
+	// EnterCollection_expression is called when entering the collection_expression production.
+	EnterCollection_expression(c *Collection_expressionContext)
 
 	// EnterCase_statement is called when entering the case_statement production.
 	EnterCase_statement(c *Case_statementContext)
@@ -3313,6 +3286,9 @@ type PlSqlParserListener interface {
 	// EnterWithin_or_over_part is called when entering the within_or_over_part production.
 	EnterWithin_or_over_part(c *Within_or_over_partContext)
 
+	// EnterString_delimiter is called when entering the string_delimiter production.
+	EnterString_delimiter(c *String_delimiterContext)
+
 	// EnterCost_matrix_clause is called when entering the cost_matrix_clause production.
 	EnterCost_matrix_clause(c *Cost_matrix_clauseContext)
 
@@ -3349,8 +3325,14 @@ type PlSqlParserListener interface {
 	// EnterXmlserialize_param_ident_part is called when entering the xmlserialize_param_ident_part production.
 	EnterXmlserialize_param_ident_part(c *Xmlserialize_param_ident_partContext)
 
+	// EnterSql_plus_command_no_semicolon is called when entering the sql_plus_command_no_semicolon production.
+	EnterSql_plus_command_no_semicolon(c *Sql_plus_command_no_semicolonContext)
+
 	// EnterSql_plus_command is called when entering the sql_plus_command production.
 	EnterSql_plus_command(c *Sql_plus_commandContext)
+
+	// EnterStart_command is called when entering the start_command production.
+	EnterStart_command(c *Start_commandContext)
 
 	// EnterWhenever_command is called when entering the whenever_command production.
 	EnterWhenever_command(c *Whenever_commandContext)
@@ -3475,6 +3457,12 @@ type PlSqlParserListener interface {
 	// EnterLink_name is called when entering the link_name production.
 	EnterLink_name(c *Link_nameContext)
 
+	// EnterLocal_link_name is called when entering the local_link_name production.
+	EnterLocal_link_name(c *Local_link_nameContext)
+
+	// EnterConnection_qualifier is called when entering the connection_qualifier production.
+	EnterConnection_qualifier(c *Connection_qualifierContext)
+
 	// EnterColumn_name is called when entering the column_name production.
 	EnterColumn_name(c *Column_nameContext)
 
@@ -3541,6 +3529,9 @@ type PlSqlParserListener interface {
 	// EnterBind_variable is called when entering the bind_variable production.
 	EnterBind_variable(c *Bind_variableContext)
 
+	// EnterGeneral_element is called when entering the general_element production.
+	EnterGeneral_element(c *General_elementContext)
+
 	// EnterGeneral_element_part is called when entering the general_element_part production.
 	EnterGeneral_element_part(c *General_element_partContext)
 
@@ -3556,9 +3547,6 @@ type PlSqlParserListener interface {
 	// EnterConstant is called when entering the constant production.
 	EnterConstant(c *ConstantContext)
 
-	// EnterConstant_without_variable is called when entering the constant_without_variable production.
-	EnterConstant_without_variable(c *Constant_without_variableContext)
-
 	// EnterNumeric is called when entering the numeric production.
 	EnterNumeric(c *NumericContext)
 
@@ -3568,20 +3556,23 @@ type PlSqlParserListener interface {
 	// EnterQuoted_string is called when entering the quoted_string production.
 	EnterQuoted_string(c *Quoted_stringContext)
 
-	// EnterChar_str is called when entering the char_str production.
-	EnterChar_str(c *Char_strContext)
-
 	// EnterIdentifier is called when entering the identifier production.
 	EnterIdentifier(c *IdentifierContext)
 
 	// EnterId_expression is called when entering the id_expression production.
 	EnterId_expression(c *Id_expressionContext)
 
+	// EnterInquiry_directive is called when entering the inquiry_directive production.
+	EnterInquiry_directive(c *Inquiry_directiveContext)
+
 	// EnterOuter_join_sign is called when entering the outer_join_sign production.
 	EnterOuter_join_sign(c *Outer_join_signContext)
 
 	// EnterRegular_id is called when entering the regular_id production.
 	EnterRegular_id(c *Regular_idContext)
+
+	// EnterNon_reserved_keywords_in_18c is called when entering the non_reserved_keywords_in_18c production.
+	EnterNon_reserved_keywords_in_18c(c *Non_reserved_keywords_in_18cContext)
 
 	// EnterNon_reserved_keywords_in_12c is called when entering the non_reserved_keywords_in_12c production.
 	EnterNon_reserved_keywords_in_12c(c *Non_reserved_keywords_in_12cContext)
@@ -3771,6 +3762,21 @@ type PlSqlParserListener interface {
 
 	// ExitResult_cache_clause is called when exiting the result_cache_clause production.
 	ExitResult_cache_clause(c *Result_cache_clauseContext)
+
+	// ExitAccessible_by_clause is called when exiting the accessible_by_clause production.
+	ExitAccessible_by_clause(c *Accessible_by_clauseContext)
+
+	// ExitDefault_collation_clause is called when exiting the default_collation_clause production.
+	ExitDefault_collation_clause(c *Default_collation_clauseContext)
+
+	// ExitAggregate_clause is called when exiting the aggregate_clause production.
+	ExitAggregate_clause(c *Aggregate_clauseContext)
+
+	// ExitPipelined_using_clause is called when exiting the pipelined_using_clause production.
+	ExitPipelined_using_clause(c *Pipelined_using_clauseContext)
+
+	// ExitAccessor is called when exiting the accessor production.
+	ExitAccessor(c *AccessorContext)
 
 	// ExitRelies_on_part is called when exiting the relies_on_part production.
 	ExitRelies_on_part(c *Relies_on_partContext)
@@ -4210,6 +4216,9 @@ type PlSqlParserListener interface {
 	// ExitAction_audit_clause is called when exiting the action_audit_clause production.
 	ExitAction_audit_clause(c *Action_audit_clauseContext)
 
+	// ExitSystem_actions is called when exiting the system_actions production.
+	ExitSystem_actions(c *System_actionsContext)
+
 	// ExitStandard_actions is called when exiting the standard_actions production.
 	ExitStandard_actions(c *Standard_actionsContext)
 
@@ -4297,9 +4306,6 @@ type PlSqlParserListener interface {
 	// ExitBitmap_join_index_clause is called when exiting the bitmap_join_index_clause production.
 	ExitBitmap_join_index_clause(c *Bitmap_join_index_clauseContext)
 
-	// ExitIndex_expr_option is called when exiting the index_expr_option production.
-	ExitIndex_expr_option(c *Index_expr_optionContext)
-
 	// ExitIndex_expr is called when exiting the index_expr production.
 	ExitIndex_expr(c *Index_exprContext)
 
@@ -4323,6 +4329,9 @@ type PlSqlParserListener interface {
 
 	// ExitIndex_partitioning_clause is called when exiting the index_partitioning_clause production.
 	ExitIndex_partitioning_clause(c *Index_partitioning_clauseContext)
+
+	// ExitIndex_partitioning_values_list is called when exiting the index_partitioning_values_list production.
+	ExitIndex_partitioning_values_list(c *Index_partitioning_values_listContext)
 
 	// ExitLocal_partitioned_index is called when exiting the local_partitioned_index production.
 	ExitLocal_partitioned_index(c *Local_partitioned_indexContext)
@@ -4981,9 +4990,6 @@ type PlSqlParserListener interface {
 	// ExitBuild_clause is called when exiting the build_clause production.
 	ExitBuild_clause(c *Build_clauseContext)
 
-	// ExitPartial_index_clause is called when exiting the partial_index_clause production.
-	ExitPartial_index_clause(c *Partial_index_clauseContext)
-
 	// ExitParallel_clause is called when exiting the parallel_clause production.
 	ExitParallel_clause(c *Parallel_clauseContext)
 
@@ -5335,6 +5341,9 @@ type PlSqlParserListener interface {
 	// ExitRange_values_clause is called when exiting the range_values_clause production.
 	ExitRange_values_clause(c *Range_values_clauseContext)
 
+	// ExitRange_values_list is called when exiting the range_values_list production.
+	ExitRange_values_list(c *Range_values_listContext)
+
 	// ExitList_values_clause is called when exiting the list_values_clause production.
 	ExitList_values_clause(c *List_values_clauseContext)
 
@@ -5430,96 +5439,6 @@ type PlSqlParserListener interface {
 
 	// ExitOpaque_format_spec is called when exiting the opaque_format_spec production.
 	ExitOpaque_format_spec(c *Opaque_format_specContext)
-
-	// ExitRecord_format_info is called when exiting the record_format_info production.
-	ExitRecord_format_info(c *Record_format_infoContext)
-
-	// ExitEt_record_spec_options is called when exiting the et_record_spec_options production.
-	ExitEt_record_spec_options(c *Et_record_spec_optionsContext)
-
-	// ExitEt_record_spec_option is called when exiting the et_record_spec_option production.
-	ExitEt_record_spec_option(c *Et_record_spec_optionContext)
-
-	// ExitEt_output_files is called when exiting the et_output_files production.
-	ExitEt_output_files(c *Et_output_filesContext)
-
-	// ExitEt_output_file is called when exiting the et_output_file production.
-	ExitEt_output_file(c *Et_output_fileContext)
-
-	// ExitDirectory_spec is called when exiting the directory_spec production.
-	ExitDirectory_spec(c *Directory_specContext)
-
-	// ExitFile_spec is called when exiting the file_spec production.
-	ExitFile_spec(c *File_specContext)
-
-	// ExitField_definitions is called when exiting the field_definitions production.
-	ExitField_definitions(c *Field_definitionsContext)
-
-	// ExitField_options is called when exiting the field_options production.
-	ExitField_options(c *Field_optionsContext)
-
-	// ExitField_option is called when exiting the field_option production.
-	ExitField_option(c *Field_optionContext)
-
-	// ExitField_list is called when exiting the field_list production.
-	ExitField_list(c *Field_listContext)
-
-	// ExitField_item is called when exiting the field_item production.
-	ExitField_item(c *Field_itemContext)
-
-	// ExitField_name is called when exiting the field_name production.
-	ExitField_name(c *Field_nameContext)
-
-	// ExitPos_spec is called when exiting the pos_spec production.
-	ExitPos_spec(c *Pos_specContext)
-
-	// ExitPos_start is called when exiting the pos_start production.
-	ExitPos_start(c *Pos_startContext)
-
-	// ExitPos_increment is called when exiting the pos_increment production.
-	ExitPos_increment(c *Pos_incrementContext)
-
-	// ExitPos_end is called when exiting the pos_end production.
-	ExitPos_end(c *Pos_endContext)
-
-	// ExitPos_length is called when exiting the pos_length production.
-	ExitPos_length(c *Pos_lengthContext)
-
-	// ExitDatatype_spec is called when exiting the datatype_spec production.
-	ExitDatatype_spec(c *Datatype_specContext)
-
-	// ExitInit_spec is called when exiting the init_spec production.
-	ExitInit_spec(c *Init_specContext)
-
-	// ExitLls_clause is called when exiting the lls_clause production.
-	ExitLls_clause(c *Lls_clauseContext)
-
-	// ExitDelim_spec is called when exiting the delim_spec production.
-	ExitDelim_spec(c *Delim_specContext)
-
-	// ExitTrim_spec is called when exiting the trim_spec production.
-	ExitTrim_spec(c *Trim_specContext)
-
-	// ExitField_date_format is called when exiting the field_date_format production.
-	ExitField_date_format(c *Field_date_formatContext)
-
-	// ExitColumn_transforms is called when exiting the column_transforms production.
-	ExitColumn_transforms(c *Column_transformsContext)
-
-	// ExitTransform is called when exiting the transform production.
-	ExitTransform(c *TransformContext)
-
-	// ExitSource_field is called when exiting the source_field production.
-	ExitSource_field(c *Source_fieldContext)
-
-	// ExitLobfile_item is called when exiting the lobfile_item production.
-	ExitLobfile_item(c *Lobfile_itemContext)
-
-	// ExitLobfile_attr_list is called when exiting the lobfile_attr_list production.
-	ExitLobfile_attr_list(c *Lobfile_attr_listContext)
-
-	// ExitConcat_item is called when exiting the concat_item production.
-	ExitConcat_item(c *Concat_itemContext)
 
 	// ExitRow_movement_clause is called when exiting the row_movement_clause production.
 	ExitRow_movement_clause(c *Row_movement_clauseContext)
@@ -5878,9 +5797,6 @@ type PlSqlParserListener interface {
 	// ExitCreate_database_link is called when exiting the create_database_link production.
 	ExitCreate_database_link(c *Create_database_linkContext)
 
-	// ExitDblink is called when exiting the dblink production.
-	ExitDblink(c *DblinkContext)
-
 	// ExitDrop_database_link is called when exiting the drop_database_link production.
 	ExitDrop_database_link(c *Drop_database_linkContext)
 
@@ -6037,11 +5953,11 @@ type PlSqlParserListener interface {
 	// ExitModify_column_clauses is called when exiting the modify_column_clauses production.
 	ExitModify_column_clauses(c *Modify_column_clausesContext)
 
-	// ExitModify_col_visibility is called when exiting the modify_col_visibility production.
-	ExitModify_col_visibility(c *Modify_col_visibilityContext)
-
 	// ExitModify_col_properties is called when exiting the modify_col_properties production.
 	ExitModify_col_properties(c *Modify_col_propertiesContext)
+
+	// ExitModify_col_visibility is called when exiting the modify_col_visibility production.
+	ExitModify_col_visibility(c *Modify_col_visibilityContext)
 
 	// ExitModify_col_substitutable is called when exiting the modify_col_substitutable production.
 	ExitModify_col_substitutable(c *Modify_col_substitutableContext)
@@ -6172,9 +6088,6 @@ type PlSqlParserListener interface {
 	// ExitDrop_constraint_clause is called when exiting the drop_constraint_clause production.
 	ExitDrop_constraint_clause(c *Drop_constraint_clauseContext)
 
-	// ExitDrop_primary_key_or_unique_or_generic_clause is called when exiting the drop_primary_key_or_unique_or_generic_clause production.
-	ExitDrop_primary_key_or_unique_or_generic_clause(c *Drop_primary_key_or_unique_or_generic_clauseContext)
-
 	// ExitAdd_constraint is called when exiting the add_constraint production.
 	ExitAdd_constraint(c *Add_constraintContext)
 
@@ -6228,6 +6141,12 @@ type PlSqlParserListener interface {
 
 	// ExitC_parameters_clause is called when exiting the c_parameters_clause production.
 	ExitC_parameters_clause(c *C_parameters_clauseContext)
+
+	// ExitC_external_parameter is called when exiting the c_external_parameter production.
+	ExitC_external_parameter(c *C_external_parameterContext)
+
+	// ExitC_property is called when exiting the c_property production.
+	ExitC_property(c *C_propertyContext)
 
 	// ExitParameter is called when exiting the parameter production.
 	ExitParameter(c *ParameterContext)
@@ -6349,6 +6268,15 @@ type PlSqlParserListener interface {
 	// ExitPipe_row_statement is called when exiting the pipe_row_statement production.
 	ExitPipe_row_statement(c *Pipe_row_statementContext)
 
+	// ExitSelection_directive is called when exiting the selection_directive production.
+	ExitSelection_directive(c *Selection_directiveContext)
+
+	// ExitError_directive is called when exiting the error_directive production.
+	ExitError_directive(c *Error_directiveContext)
+
+	// ExitSelection_directive_body is called when exiting the selection_directive_body production.
+	ExitSelection_directive_body(c *Selection_directive_bodyContext)
+
 	// ExitBody is called when exiting the body production.
 	ExitBody(c *BodyContext)
 
@@ -6357,6 +6285,9 @@ type PlSqlParserListener interface {
 
 	// ExitTrigger_block is called when exiting the trigger_block production.
 	ExitTrigger_block(c *Trigger_blockContext)
+
+	// ExitTps_block is called when exiting the tps_block production.
+	ExitTps_block(c *Tps_blockContext)
 
 	// ExitBlock is called when exiting the block production.
 	ExitBlock(c *BlockContext)
@@ -6385,6 +6316,9 @@ type PlSqlParserListener interface {
 	// ExitFetch_statement is called when exiting the fetch_statement production.
 	ExitFetch_statement(c *Fetch_statementContext)
 
+	// ExitVariable_or_collection is called when exiting the variable_or_collection production.
+	ExitVariable_or_collection(c *Variable_or_collectionContext)
+
 	// ExitOpen_for_statement is called when exiting the open_for_statement production.
 	ExitOpen_for_statement(c *Open_for_statementContext)
 
@@ -6409,6 +6343,9 @@ type PlSqlParserListener interface {
 	// ExitSavepoint_statement is called when exiting the savepoint_statement production.
 	ExitSavepoint_statement(c *Savepoint_statementContext)
 
+	// ExitCollection_method_call is called when exiting the collection_method_call production.
+	ExitCollection_method_call(c *Collection_method_callContext)
+
 	// ExitExplain_statement is called when exiting the explain_statement production.
 	ExitExplain_statement(c *Explain_statementContext)
 
@@ -6418,17 +6355,41 @@ type PlSqlParserListener interface {
 	// ExitSelect_statement is called when exiting the select_statement production.
 	ExitSelect_statement(c *Select_statementContext)
 
+	// ExitWith_clause is called when exiting the with_clause production.
+	ExitWith_clause(c *With_clauseContext)
+
+	// ExitWith_factoring_clause is called when exiting the with_factoring_clause production.
+	ExitWith_factoring_clause(c *With_factoring_clauseContext)
+
 	// ExitSubquery_factoring_clause is called when exiting the subquery_factoring_clause production.
 	ExitSubquery_factoring_clause(c *Subquery_factoring_clauseContext)
-
-	// ExitFactoring_element is called when exiting the factoring_element production.
-	ExitFactoring_element(c *Factoring_elementContext)
 
 	// ExitSearch_clause is called when exiting the search_clause production.
 	ExitSearch_clause(c *Search_clauseContext)
 
 	// ExitCycle_clause is called when exiting the cycle_clause production.
 	ExitCycle_clause(c *Cycle_clauseContext)
+
+	// ExitSubav_factoring_clause is called when exiting the subav_factoring_clause production.
+	ExitSubav_factoring_clause(c *Subav_factoring_clauseContext)
+
+	// ExitSubav_clause is called when exiting the subav_clause production.
+	ExitSubav_clause(c *Subav_clauseContext)
+
+	// ExitHierarchies_clause is called when exiting the hierarchies_clause production.
+	ExitHierarchies_clause(c *Hierarchies_clauseContext)
+
+	// ExitFilter_clauses is called when exiting the filter_clauses production.
+	ExitFilter_clauses(c *Filter_clausesContext)
+
+	// ExitFilter_clause is called when exiting the filter_clause production.
+	ExitFilter_clause(c *Filter_clauseContext)
+
+	// ExitAdd_calcs_clause is called when exiting the add_calcs_clause production.
+	ExitAdd_calcs_clause(c *Add_calcs_clauseContext)
+
+	// ExitAdd_calc_meas_clause is called when exiting the add_calc_meas_clause production.
+	ExitAdd_calc_meas_clause(c *Add_calc_meas_clauseContext)
 
 	// ExitSubquery is called when exiting the subquery production.
 	ExitSubquery(c *SubqueryContext)
@@ -6451,9 +6412,6 @@ type PlSqlParserListener interface {
 	// ExitSelect_list_elements is called when exiting the select_list_elements production.
 	ExitSelect_list_elements(c *Select_list_elementsContext)
 
-	// ExitTable_wild is called when exiting the table_wild production.
-	ExitTable_wild(c *Table_wildContext)
-
 	// ExitTable_ref_list is called when exiting the table_ref_list production.
 	ExitTable_ref_list(c *Table_ref_listContext)
 
@@ -6469,8 +6427,8 @@ type PlSqlParserListener interface {
 	// ExitTable_ref_aux_internal_two is called when exiting the table_ref_aux_internal_two production.
 	ExitTable_ref_aux_internal_two(c *Table_ref_aux_internal_twoContext)
 
-	// ExitTable_ref_aux_internal_three is called when exiting the table_ref_aux_internal_three production.
-	ExitTable_ref_aux_internal_three(c *Table_ref_aux_internal_threeContext)
+	// ExitTable_ref_aux_internal_thre is called when exiting the table_ref_aux_internal_thre production.
+	ExitTable_ref_aux_internal_thre(c *Table_ref_aux_internal_threContext)
 
 	// ExitJoin_clause is called when exiting the join_clause production.
 	ExitJoin_clause(c *Join_clauseContext)
@@ -6709,9 +6667,6 @@ type PlSqlParserListener interface {
 	// ExitCondition is called when exiting the condition production.
 	ExitCondition(c *ConditionContext)
 
-	// ExitJson_condition is called when exiting the json_condition production.
-	ExitJson_condition(c *Json_conditionContext)
-
 	// ExitExpressions is called when exiting the expressions production.
 	ExitExpressions(c *ExpressionsContext)
 
@@ -6726,6 +6681,9 @@ type PlSqlParserListener interface {
 
 	// ExitUnary_logical_expression is called when exiting the unary_logical_expression production.
 	ExitUnary_logical_expression(c *Unary_logical_expressionContext)
+
+	// ExitUnary_logical_operation is called when exiting the unary_logical_operation production.
+	ExitUnary_logical_operation(c *Unary_logical_operationContext)
 
 	// ExitLogical_operation is called when exiting the logical_operation production.
 	ExitLogical_operation(c *Logical_operationContext)
@@ -6768,6 +6726,12 @@ type PlSqlParserListener interface {
 
 	// ExitUnary_expression is called when exiting the unary_expression production.
 	ExitUnary_expression(c *Unary_expressionContext)
+
+	// ExitImplicit_cursor_expression is called when exiting the implicit_cursor_expression production.
+	ExitImplicit_cursor_expression(c *Implicit_cursor_expressionContext)
+
+	// ExitCollection_expression is called when exiting the collection_expression production.
+	ExitCollection_expression(c *Collection_expressionContext)
 
 	// ExitCase_statement is called when exiting the case_statement production.
 	ExitCase_statement(c *Case_statementContext)
@@ -6901,6 +6865,9 @@ type PlSqlParserListener interface {
 	// ExitWithin_or_over_part is called when exiting the within_or_over_part production.
 	ExitWithin_or_over_part(c *Within_or_over_partContext)
 
+	// ExitString_delimiter is called when exiting the string_delimiter production.
+	ExitString_delimiter(c *String_delimiterContext)
+
 	// ExitCost_matrix_clause is called when exiting the cost_matrix_clause production.
 	ExitCost_matrix_clause(c *Cost_matrix_clauseContext)
 
@@ -6937,8 +6904,14 @@ type PlSqlParserListener interface {
 	// ExitXmlserialize_param_ident_part is called when exiting the xmlserialize_param_ident_part production.
 	ExitXmlserialize_param_ident_part(c *Xmlserialize_param_ident_partContext)
 
+	// ExitSql_plus_command_no_semicolon is called when exiting the sql_plus_command_no_semicolon production.
+	ExitSql_plus_command_no_semicolon(c *Sql_plus_command_no_semicolonContext)
+
 	// ExitSql_plus_command is called when exiting the sql_plus_command production.
 	ExitSql_plus_command(c *Sql_plus_commandContext)
+
+	// ExitStart_command is called when exiting the start_command production.
+	ExitStart_command(c *Start_commandContext)
 
 	// ExitWhenever_command is called when exiting the whenever_command production.
 	ExitWhenever_command(c *Whenever_commandContext)
@@ -7063,6 +7036,12 @@ type PlSqlParserListener interface {
 	// ExitLink_name is called when exiting the link_name production.
 	ExitLink_name(c *Link_nameContext)
 
+	// ExitLocal_link_name is called when exiting the local_link_name production.
+	ExitLocal_link_name(c *Local_link_nameContext)
+
+	// ExitConnection_qualifier is called when exiting the connection_qualifier production.
+	ExitConnection_qualifier(c *Connection_qualifierContext)
+
 	// ExitColumn_name is called when exiting the column_name production.
 	ExitColumn_name(c *Column_nameContext)
 
@@ -7129,6 +7108,9 @@ type PlSqlParserListener interface {
 	// ExitBind_variable is called when exiting the bind_variable production.
 	ExitBind_variable(c *Bind_variableContext)
 
+	// ExitGeneral_element is called when exiting the general_element production.
+	ExitGeneral_element(c *General_elementContext)
+
 	// ExitGeneral_element_part is called when exiting the general_element_part production.
 	ExitGeneral_element_part(c *General_element_partContext)
 
@@ -7144,9 +7126,6 @@ type PlSqlParserListener interface {
 	// ExitConstant is called when exiting the constant production.
 	ExitConstant(c *ConstantContext)
 
-	// ExitConstant_without_variable is called when exiting the constant_without_variable production.
-	ExitConstant_without_variable(c *Constant_without_variableContext)
-
 	// ExitNumeric is called when exiting the numeric production.
 	ExitNumeric(c *NumericContext)
 
@@ -7156,20 +7135,23 @@ type PlSqlParserListener interface {
 	// ExitQuoted_string is called when exiting the quoted_string production.
 	ExitQuoted_string(c *Quoted_stringContext)
 
-	// ExitChar_str is called when exiting the char_str production.
-	ExitChar_str(c *Char_strContext)
-
 	// ExitIdentifier is called when exiting the identifier production.
 	ExitIdentifier(c *IdentifierContext)
 
 	// ExitId_expression is called when exiting the id_expression production.
 	ExitId_expression(c *Id_expressionContext)
 
+	// ExitInquiry_directive is called when exiting the inquiry_directive production.
+	ExitInquiry_directive(c *Inquiry_directiveContext)
+
 	// ExitOuter_join_sign is called when exiting the outer_join_sign production.
 	ExitOuter_join_sign(c *Outer_join_signContext)
 
 	// ExitRegular_id is called when exiting the regular_id production.
 	ExitRegular_id(c *Regular_idContext)
+
+	// ExitNon_reserved_keywords_in_18c is called when exiting the non_reserved_keywords_in_18c production.
+	ExitNon_reserved_keywords_in_18c(c *Non_reserved_keywords_in_18cContext)
 
 	// ExitNon_reserved_keywords_in_12c is called when exiting the non_reserved_keywords_in_12c production.
 	ExitNon_reserved_keywords_in_12c(c *Non_reserved_keywords_in_12cContext)
