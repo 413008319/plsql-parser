@@ -76,6 +76,7 @@ unit_statement
     | alter_type
     | alter_user
     | alter_view
+    | transaction_control_statements
     | call_statement
     | create_analytic_view
     | create_attribute_dimension
@@ -174,7 +175,6 @@ unit_statement
     | purge_statement
     | rename_object
     | revoke_statement
-    | transaction_control_statements
     | truncate_cluster
     | truncate_table
     | unified_auditing
@@ -4071,7 +4071,7 @@ create_synonym
         AT_SIGN link_name
     )?
     | CREATE (OR REPLACE)? SYNONYM (s = schema_name PERIOD)? synonym_name FOR (schema_name PERIOD)? schema_object_name (
-        AT_SIGN (schema_name PERIOD)? link_name
+        AT_SIGN link_name
     )?
     ;
 
@@ -4566,7 +4566,7 @@ replay_upgrade_clauses
     ;
 
 alter_database_link
-    : ALTER SHARED? PUBLIC? DATABASE LINK local_link_name (
+    : ALTER SHARED? PUBLIC? DATABASE LINK link_name (
         CONNECT TO user_object_name IDENTIFIED BY password_value link_authentication?
         | link_authentication
     )
@@ -7256,7 +7256,7 @@ general_element
     ;
 
 general_element_part
-    : (INTRODUCER char_set_name)? id_expression ('@' link_name)? function_argument*
+    : (INTRODUCER char_set_name)? id_expression ('.' id_expression)* ('@' link_name)? function_argument*
     ;
 
 table_element
